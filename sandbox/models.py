@@ -5,4 +5,4 @@ class Location:
         self.category = category
 
     def display_info(self):
-        return f"[{self.building_id}] - {self.name}"
+        return f"[{self.building_id}] - {self.name} ({self.category})"
