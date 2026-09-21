@@ -14,6 +14,7 @@ def log_search(term):
 def search_building():
     # Linear Search Algorithm
     search_term = input("\nEnter the name of the building to search: ").lower()
+    log_search(search_term)
     found = False
 
     print("\nSearch Results")
@@ -82,7 +83,7 @@ def main_menu():
         print("[4] Plan a Route")               # Graph - future implementation
         print("[5] Exit")
 
-        choice = input("Select an option [1 - 4]: ")
+        choice = input("Select an option [1 - 5]: ")
 
         match choice:
             case '1':
@@ -90,14 +91,14 @@ def main_menu():
             case '2':
                 view_history()
             case '3':
-                pass
-            case '4':
                 building_stats()
+            case '4':
+                pass
             case '5':
                 print("Exiting System...")
                 break
             case _:
-                print("Invalid choice. Please enter [1 - 4]")
+                print("Invalid choice. Please enter [1 - 5]")
 
 if __name__ == "__main__":
     main_menu()
