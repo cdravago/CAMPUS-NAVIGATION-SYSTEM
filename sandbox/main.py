@@ -4,7 +4,7 @@ MAX_HISTORY = 5
 navigation_history = []
 
 def log_search(term):
-    term = term.strip
+    term = term.strip()
     if not term:
         return
     if len(navigation_history) >= MAX_HISTORY:
@@ -44,7 +44,7 @@ def building_stats():
     print("\nBuilding Stats / Filter by Category")
     print("[1] View building count  per category")
     print("[2] Filter Buildings by category")
-    choice = int(input("Select an option [1 - 2]"))
+    choice = int(input("Select an option [1 - 2]: "))
 
     match choice:
         case 1:
