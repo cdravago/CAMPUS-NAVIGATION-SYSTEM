@@ -1,0 +1,41 @@
+This is a temporary text file
+different workflows for different members
+
+for the one who controls the main repo (matt workflow):
+1. check which git file or directory working on:
+	via: PS C:\Users\Admin\OneDrive\Desktop\dsa team project\CAMPUS-NAVIGATION-SYSTEM>
+	must look like that.
+	if PS C:\Users\Admin\OneDrive\Desktop\dsa team project>:
+		cd CAMPUS-NAVIGATION-SYSTEM 
+	(so the git directory now is CAMPUS-NAVIGATION-SYSTEM)
+2. check which branch currently working on:
+    =git status or git branch
+    if on main:
+        git switch matt-branch
+3. get the latest changes from main (main repo)
+    =git pull origin main
+4. write some code
+5. Push Request code to main repo:
+    =git add .
+    =git commit -m "comment"
+    =git push or git -u origin matt-branch(if first time pushing as branch)
+6. check github Pull Request and let team review the code before pushing
+7. relapse
+
+other contributors workflow:
+1. check status:
+    =git status
+2. get latest changes from main repo:
+    =git pull origin main
+3. write some code
+4. Push code to forked repo:
+    git add .
+    git commit -m "comment"
+    git push
+5. check github forked repo
+6. PR(Pull Request) to main repo:
+    request pull request from main repo for merge request
+7. review pending pull request of other contributors if there is any
+8. relapse
+
+
