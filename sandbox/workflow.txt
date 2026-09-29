@@ -36,5 +36,6 @@ other contributors workflow:
 6. PR(Pull Request) to main repo:
     request pull request from main repo for merge request
 7. review pending pull request of other contributors if there is any
+8. relapse
 
 
