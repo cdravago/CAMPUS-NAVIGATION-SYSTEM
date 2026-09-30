@@ -17,5 +17,7 @@ campus_locations = [
     Location(14, "Technology and Entrepreneurship Building", "Academic"),
     Location(15, "Canteen", "Facility"),
     Location(16, "Dormitory", "Residential"),
-    Location(17, "Food Lab", "Academic")
+    Location(17, "Food Lab", "Academic"),
+    Location(18, "Nursing Department", "Academic"),
+
 ]
