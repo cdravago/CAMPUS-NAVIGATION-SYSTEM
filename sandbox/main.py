@@ -18,46 +18,56 @@ def search_building():
     log_search(search_term)
     found = False
 
-    print("\nSearch Results")
+    print("\n[-------------------------------------------]")
+    print("           [-SEARCH RESULTS-]")
     for loc in campus_locations:
         if search_term in loc.name.lower():
             print(loc.display_info())
+            print("[-------------------------------------------]\n")
             found = True
 
     if not found:
-        print("Building not found. Please try another name")
+        print("   [-BUILDING NOT FOUND, TRY ANOTHER NAME-]")
+        print("[-------------------------------------------]\n")
 
 def view_history():
-    print(f"\nNavigation History (last {MAX_HISTORY} searches)")
+    print("\n[-------------------------------------------]")
+    print(f"  [-NAVIGATION HISTORY (LAST {MAX_HISTORY} SEARCHES)-]")
     if not navigation_history:
-        print("No search history yet.")
+        print("\n[-------------------------------------------]")
+        print("         [-NO SEARCH HISTORY FOUND]-")
+        print("[-------------------------------------------]\n")
         return
 
     for i, term in enumerate(navigation_history, start=1):
         print(f"{i}. {term}")
+    print("[-------------------------------------------]\n")
 
 def building_stats():
     categories = []
     for loc in campus_locations:
         if loc.category not in categories:
             categories.append(loc.category)
-
-    print("\nBuilding Stats / Filter by Category")
+    print("\n[-------------------------------------------]")
+    print("   [-BUILDING STATS / FILTER BY CATEGORY-]")
     print("[1] View building count  per category")
     print("[2] Filter Buildings by category")
+    print("[-------------------------------------------]\n")
     choice = int(input("Select an option [1 - 2]: "))
 
     match choice:
         case 1:
-            print("\nBuilding Counter per Category")
+            print("\n[-------------------------------------------]")
+            print("       [-BUILDING COUNT PER CATEGORY-]")
             for cat in categories:
                 count = 0
                 for loc in campus_locations:
                     if loc.category == cat:
                         count += 1
                 print(f"{cat}: {count}")
+            print("[-------------------------------------------]\n")
         case 2:
-            print("\nAvailable Categories:", ", ".join(categories))
+            print("AVAILABLE CATEGORIES:", ", ".join(categories))
             cat_input = input("Enter category to filter: ").strip()
 
             matches = []
@@ -66,26 +76,28 @@ def building_stats():
                     matches.append(loc)
 
             if matches:
-                print(f"\nBuildings under {cat_input}")
+                print(f"\n     [-BUILDINGS UNDER {cat_input.upper()}-]")
                 for loc in matches:
                     print(loc.display_info())
+                print("[-------------------------------------------]\n")
             else:
-                print(f"No buildings found under category '{cat_input}'")
+                print(f"   [-NO BUILDINGS FOUND UNDER CATEGORY '{cat_input}'-]")
         case _:
             print("Invalid choice. Please enter [1 - 2]")
+        
 
 
 def main_menu():
     while True:
 
-        print("[*******************************************]")
+        print("[-------------------------------------------]")
         print("      [-CAMPUS NAVIGATION SYSTEM-] ＼(￣▽￣)／")
         print("[1] Search for a Building")
         print("[2] View Navigation History")    # Stack - Array(log) for now
         print("[3] Building Stats / Filter")    # Array 
         print("[4] Plan a Route")               # Graph - future implementation
         print("[5] Exit")
-        print("[*******************************************]")
+        print("[-------------------------------------------]")
 
         choice = input("Select an option [1 - 5]: ")
 
@@ -99,10 +111,10 @@ def main_menu():
             case '4':
                 pass
             case '5':
-                print("Exiting System...")
+                print("EXITING SYSTEM...")
                 break
             case _:
-                print("Invalid choice. Please enter [1 - 5]")
+                print("\n  [-INVALID CHOICE. PLEASE ENTER [1 - 5]-]\n")
 
 if __name__ == "__main__":
     main_menu()
