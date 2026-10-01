@@ -77,12 +77,15 @@ def building_stats():
 
 def main_menu():
     while True:
-        print("\nCAMPUS NAVIGATION SYSTEM")
+
+        print("[*******************************************]")
+        print("      [-CAMPUS NAVIGATION SYSTEM-] ＼(￣▽￣)／")
         print("[1] Search for a Building")
         print("[2] View Navigation History")    # Stack - Array(log) for now
         print("[3] Building Stats / Filter")    # Array 
         print("[4] Plan a Route")               # Graph - future implementation
         print("[5] Exit")
+        print("[*******************************************]")
 
         choice = input("Select an option [1 - 5]: ")
 
