@@ -22,6 +22,7 @@ campus-navigation-system/
 ├── database.py                # campus_locations array
 ├── docs/
 │   ├── module-assignments.md
+|   ├── workflow.txt
 │   ├── lab-reports/           # One per DSA phase/topic
 │   └── flowcharts/
 └── tests/                     # Sample input/output logs per module

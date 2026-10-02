@@ -38,3 +38,7 @@ for grading while covering more concepts as a group.
 - 09/19/2026 — Second online meeting, discussed assignment of modules, Lab Report for Arrays started
 - 09/20/2026 — 3/5 Arrays built for Building Search, Navigation History, Building Stats/Filter.
 - 09/21/2026 - Expanded database.py campus_locations (5 -> 17)
+- 09/30/2026 - Added one missing location to database.py campus_locations (Nursing Department)
+- 09/30/2026 - Added workflow text file to guide other group members with handling the repository
+- 10/01/2026 - Improved the system's UI (Menus)
+- 10/02/2026 - Minor changes to workflow
