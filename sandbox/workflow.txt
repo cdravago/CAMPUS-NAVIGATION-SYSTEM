@@ -13,7 +13,10 @@ for the one who controls the main repo (matt workflow):
     if on main:
         git switch matt-branch
 3. get the latest changes from main (main repo)
+    =git pull upstream main
     =git pull origin main
+    if first time:
+        =git remote add upstream https://github.com/devmatt-hmm/CAMPUS-NAVIGATION-SYSTEM
 4. write some code
 5. Push Request code to main repo:
     =git add .
@@ -26,7 +29,10 @@ other contributors workflow:
 1. check status:
     =git status
 2. get latest changes from main repo:
+    =git pull upstream main
     =git pull origin main
+    if first time:
+        =git remote add upstream https://github.com/devmatt-hmm/CAMPUS-NAVIGATION-SYSTEM
 3. write some code
 4. Push code to forked repo:
     git add .
