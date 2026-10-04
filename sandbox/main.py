@@ -1,4 +1,5 @@
 from database import campus_locations
+import display_route
 #push test
 #push test success
 MAX_HISTORY = 5
@@ -84,6 +85,9 @@ def building_stats():
                 print(f"   [-NO BUILDINGS FOUND UNDER CATEGORY '{cat_input}'-]")
         case _:
             print("Invalid choice. Please enter [1 - 2]")
+def plan_route():
+    display_route.run()
+        
         
 
 
@@ -109,7 +113,7 @@ def main_menu():
             case '3':
                 building_stats()
             case '4':
-                pass
+                plan_route()
             case '5':
                 print("EXITING SYSTEM...")
                 break
