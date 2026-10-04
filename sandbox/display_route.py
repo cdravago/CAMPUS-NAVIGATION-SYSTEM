@@ -1,7 +1,7 @@
 import heapq
 
 # ---------------------------------------------------------------------------
-# 1. ALL NODES: 18 real buildings (selectable) + synthetic road junctions
+# 1. ALL NODES: 18 real buildings (sele  ctable) + synthetic road junctions
 #    (not selectable, only used to shape the route realistically)
 # ---------------------------------------------------------------------------
 NODES = {
