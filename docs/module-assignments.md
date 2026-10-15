@@ -22,14 +22,26 @@ for grading while covering more concepts as a group.
 - **Planned upgrade:** Hash Map/Dictionary grouping (stretch goal).
 
 ### 4. Route Planning — Mateo Orpiana
-- **Responsibilities:** Plan a path between two buildings.
-- **Phase 1 (current):** Not yet built — Graph not covered in lectures.
-- **Planned:** Graph representation of campus buildings + BFS/DFS pathfinding.
+- **Responsibilities:** Find the shortest path between two buildings; render it on an ASCII campus map.
+- **Built:** Full Graph implementation — Dijkstra's shortest path algorithm over a
+  campus road-junction graph (`display_route.py`), with multi-hop routing and an
+  ASCII map renderer. This is ahead of the Array-phase plan; Graph wasn't covered
+  in lectures yet, but the course allows using any taught-or-untaught technique
+  to solve a real problem.
+- **Note:** uses its own building list/coordinates inside `display_route.py`,
+  separate from `database.py`. A few full names differ slightly between the two
+  (e.g. "Nursing Department" vs "Nursing and Health Department") — worth
+  reconciling so the two stay consistent.
 
-### 5. Directory Sort / Rank — Sherwin GIl
-- **Responsibilities:** List buildings sorted by name/ID/distance.
-- **Phase 1 (current):** Array + sorting algorithm (e.g., bubble/selection sort).
+
+### 5. Directory Sort / Rank — Sherwin Gil
+- **Responsibilities:** List buildings sorted by name, ID, or another key.
+- **Phase 1 (current):** Array + sorting algorithm (bubble sort with early exit)
+  was built and tested on 2026-09-23, but is **missing from the current
+  main.py** — no menu item, no function. Likely dropped during the Route
+  Planning merge, or sitting unmerged on a branch. See Revisions Log.
 - **Planned upgrade:** Binary Search Tree for ranked lookup.
+
 
 ## Notes / Meeting Log
 
@@ -42,3 +54,5 @@ for grading while covering more concepts as a group.
 - 09/30/2026 - Added workflow text file to guide other group members with handling the repository
 - 10/01/2026 - Improved the system's UI (Menus)
 - 10/02/2026 - Minor changes to workflow
+- 10/03/2026 - Route Planning rebuilt as a full Graph (Dijkstra's shortest path) with ASCII map rendering in display_route.py; module ownership swapped (Route Planning -> Mateo, Directory Sort/Rank -> Sherwin)
+- 10/03/2026 - Found 2 regressions during testing: building_stats() crash bug is back, and Directory Sort/Rank is missing from main.py - both logged in Revisions Log, not yet fixed

@@ -8,8 +8,10 @@ console-based campus navigation tool, built incrementally as new topics are taug
 
 ## Current Phase: Phase 1 - Arrays
 
-All modules currently use array-based logic. Later phases will upgrade specific
-modules to Stack, Graph, and other structures as those topics are covered in class.
+Most modules still use array-based logic. Route Planning jumped ahead to a full
+Graph implementation (Dijkstra's shortest path). Later phases will upgrade the
+remaining modules to Stack, Tree, and other structures as those topics are
+covered in class.
 
 No external dependencies — standard Python 3.10+ (uses `match`/`case`).
 
@@ -20,6 +22,7 @@ campus-navigation-system/
 ├── main.py                    # Menu + module logic
 ├── models.py                  # Location class
 ├── database.py                # campus_locations array
+├── display_route.py           # Route Planning - Graph (Dijkstra) + ASCII Map
 ├── docs/
 │   ├── module-assignments.md
 |   ├── workflow.txt
@@ -35,8 +38,8 @@ campus-navigation-system/
 | Carl Davin Ravago | Building Search | Done (Array) |
 | Kyla Pelaez | Navigation History | Done (Array) |
 | Francis Danao | Building Stats / Filter | Done (Array) |
-| Mateo Orpiana | Route Planning | Pending (Graph) |
-| Sherwin Gil | Directory Sort / Rank | Pending (Array → Tree) |
+| Mateo Orpiana | Route Planning | Done (Graph — Dijkstra's shortest path + ASCII map) |
+| Sherwin Gil | Directory Sort / Rank | Built, but missing from current main.py — see Revisions Log |
 
 See `docs/module-assignments.md` for responsibilities and DSA concepts per module.
 
@@ -44,8 +47,8 @@ See `docs/module-assignments.md` for responsibilities and DSA concepts per modul
 
 - [x] Arrays — Search, logging, aggregation
 - [ ] Stack — Navigation History upgrade
-- [ ] Graph — Route Planning
-- [ ] Sorting / Tree — Directory Sort/Rank
+- [x] Graph — Route Planning (Dijkstra's shortest path, built ahead of schedule)
+- [ ] Sorting / Tree — Directory Sort/Rank (built once, currently missing from main.py — see Revisions Log)
 - [ ] Hash Map — Building Stats/Filter upgrade (stretch goal)
 
 Target: 5+ DSA concepts by end of semester, per course rubric.
